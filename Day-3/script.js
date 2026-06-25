@@ -125,7 +125,7 @@ switch (signal) {
     case "Yellow": console.log("Ready"); break;
     case "Green": console.log("Go"); break;
 
-    default: console.log("Invalid Signal")
+    default: console.log("Invalid Signal");
 
 }
 
