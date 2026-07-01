@@ -239,7 +239,7 @@ bonusSal.forEach((c) => {
 // Print a professional employee report using template literals
 
 console.log("Professional Employee Report:");
-console.log("==============================");
+console.log("-------------------------------");
 
 employee.forEach((c) => {
     console.log(`
