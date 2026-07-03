@@ -685,7 +685,7 @@ function searchEmployeeById(id) {
 
 function addBonus() {
     let bonus = Number(prompt("Enter Bonus Amount"));
-    let bonusSalary = emp   .map((c) => {
+    let bonusSalary = emp.map((c) => {
         return {
             id: c.id,
             name: c.name,
@@ -745,7 +745,8 @@ function salaryAbove() {
 
     console.log("Employees with Salary Above 40000");
     highEarners.forEach((c) => {
-        console.log("Employee Name : " + c.name + " : "+" Salary : " + c.salary);
+        console.log("Employee Name : " + c.name);
+        console.log("Salary : " + c.salary);
     });
 }
 
@@ -783,23 +784,23 @@ function fetchEmployees() {
         return response.json();
     })
 
-    .then((data) => {
+        .then((data) => {
 
-        console.log("Employee Details");
-        console.log("--------------------------");
+            console.log("Employee Details");
+            console.log("--------------------------");
 
-        data.forEach((c) => {
+            data.forEach((c) => {
 
-            console.log(`
+                console.log(`
                 Name : ${c.name.firstname} ${c.name.lastname}
                 Email : ${c.email}
                 Username : ${c.username}
             `);
+            });
+        })
+        .catch((error) => {
+            console.log(error);
         });
-    })
-    .catch((error) => {
-        console.log(error);
-    });
 
 }
 
